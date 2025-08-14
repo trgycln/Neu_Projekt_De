@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Presse über uns - Bürgertreff Wissen e.V</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <div id="page-wrapper">
+
+            <header id="header">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/NavLogo.png" alt="Bürgertreff Wissen e.V. Logo">
+                        <span>Bürgertreff Wissen e.V</span>
+                    </a>
+                </h1>
+                <nav>
+                    <a href="#menu">Menü</a>
+                </nav>
+            </header>
+
+            <nav id="menu">
+                <div class="inner">
+                    <h2>Menü</h2>
+                    <ul class="links">
+                        <li><a href="index.html">Start (Komm ren!)</a></li>
+                        <li><a href="ueber-uns.html">Wir über uns (Konzept)</a></li>
+                        <li><a href="machen-sie-mit.html">Machen Sie mit</a></li>
+                        <li class="alt-menu">
+                            <a href="Angebote_ve_Veranstaltungen.html">Angebote und Veranstaltungen</a>
+                            <ul>
+                                <li><a href="angebote.html#sprachtreff">Sprachtreff</a></li>
+                                <li><a href="angebote.html#buergertreff">Bürgertreff unterwegs</a></li>
+                                <li><a href="angebote.html#nachbarschaftsboerse">Nachbarschaftsbörse</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="presse.html">Presse über uns</a></li>
+                        <li><a href="kontakt.html">Kontakt ve Impressum</a></li>
+                    </ul>
+                    <a href="#" class="close">Kapat</a>
+                </div>
+            </nav>
+
+            <div id="main">
+                <section class="wrapper style1">
+                    <div class="inner">
+                        <header class="major">
+                            <h2>Presse über uns</h2>
+                        </header>
+                        <p>Hier finden Sie eine Auswahl an Presseartikeln und Berichten über die Arbeit und Veranstaltungen des Bürgertreff Wissen e.V. Wir sind dankbar für die positive Berichterstattung und das Interesse an unserem Engagement für die Gemeinschaft.</p>
+
+                        <div class="press-gallery-container">
+                           
+                             <a href="images/Presse/image2.jpg" class="press-gallery-item" data-title="Siegener Zeitung - 01.04.2025">
+                                <img src="images/Presse/image2.jpg" alt="Gazete Kupürü 3">
+                            </a>
+                           
+                          
+                            <a href="images/Presse/Rheinzeitung0425.jpg" class="press-gallery-item" data-title="Siegener Zeitung - 01.04.2025">
+                                <img src="images/Presse/Rheinzeitung0425.jpg" alt="Gazete Kupürü 3">
+                            </a>
+                             <a href="images/Presse/ArtikelLeerstand_page-0001.jpg" class="press-gallery-item" data-title="Siegener Zeitung - 01.04.2025">
+                                <img src="images/Presse/ArtikelLeerstand_page-0001.jpg" alt="Gazete Kupürü 3">
+    <a href="images/Presse/RheinZeitung091024.jpg" class="press-gallery-item" data-title="Rhein-Zeitung - 12.02.2025">
+                                <img src="images/Presse/RheinZeitung091024.jpg" alt="Gazete Kupürü 1">
+                            </a>
+                                <a href="images/Presse/akkurier200924.docx_page-0001.jpg" class="press-gallery-item" data-title="Westerwälder Zeitung - 25.03.2025">
+                                <img src="images/Presse/akkurier200924.docx_page-0001.jpg" alt="Gazete Kupürü 2">
+                            </a>                            
+                             <a href="images/Presse/KummmetunterwegsPresseJuni25.docx_page-0001.jpg" class="press-gallery-item" data-title="Siegener Zeitung - 01.04.2025">
+                                <img src="images/Presse/KummmetunterwegsPresseJuni25.docx_page-0001.jpg" alt="Gazete Kupürü 3">
+                            </a>
+                            </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <section id="footer">
+                <div class="inner">
+                    <ul class="copyright">
+                        <li>&copy; Bürgertreff Wissen e.V. 2025. Alle Rechte vorbehalten.</li>
+                        <li>Webdesign: Turgay Celen</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+
+        <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+
+    // Fotoğraf galerisi kaydırma işlevi
+    // Bu bölümü korumak için orijinal kodun dışına taşıdım
+    // Eğer Angeböte und Veranstaltungen sayfanızda bu galeri varsa bu kod çalışmaya devam edecektir.
+    const galleries = document.querySelectorAll('.event-gallery');
+    galleries.forEach(gallery => {
+        const container = gallery.querySelector('.gallery-container');
+        const prevButton = gallery.querySelector('.prev-button');
+        const nextButton = gallery.querySelector('.next-button');
+        const items = gallery.querySelectorAll('.gallery-item');
+        let currentIndex = 0;
+
+        function updateGallery() {
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        if (prevButton && nextButton) {
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+                updateGallery();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+                updateGallery();
+            });
+        }
+    });
+
+
+    // Tam ekran görüntüleyici (Lightbox) için HTML yapısı
+    function createLightbox() {
+        if (!document.querySelector('.lightbox-overlay')) {
+            const lightboxHTML = `
+                <div class="lightbox-overlay">
+                    <div class="lightbox-content">
+                        <div class="lightbox-header"></div>
+                        <div class="lightbox-image-wrapper">
+                            <img src="" alt="" class="lightbox-image">
+                        </div>
+                    </div>
+                    <button class="lightbox-close-button">×</button>
+                </div>
+            `;
+            body.insertAdjacentHTML('beforeend', lightboxHTML);
+        }
+    }
+    
+    createLightbox();
+    
+    const lightboxOverlay = document.querySelector('.lightbox-overlay');
+    const lightboxContent = document.querySelector('.lightbox-content');
+    const lightboxImageWrapper = document.querySelector('.lightbox-image-wrapper');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    const lightboxTitle = document.querySelector('.lightbox-header');
+    const closeButton = document.querySelector('.lightbox-close-button');
+    let isZoomed = false;
+
+    document.querySelectorAll('.press-gallery-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            const fullImageUrl = item.href;
+            const title = item.getAttribute('data-title');
+
+            lightboxImage.src = fullImageUrl;
+            
+            if (title) {
+                lightboxTitle.textContent = title;
+                lightboxContent.classList.add('with-header');
+            } else {
+                lightboxContent.classList.remove('with-header');
+            }
+            
+            lightboxImage.classList.remove('zoomed'); // Her yeni açılışta zoom'u sıfırla
+            lightboxOverlay.classList.add('active');
+            body.classList.add('lightbox-active');
+        });
+    });
+
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            lightboxOverlay.classList.remove('active');
+            body.classList.remove('lightbox-active');
+        });
+    }
+
+    if (lightboxOverlay) {
+        lightboxOverlay.addEventListener('click', (e) => {
+            // Sadece arka plana veya kapatma butonuna tıklandığında pencereyi kapat
+            if (e.target === lightboxOverlay || e.target === closeButton) {
+                lightboxOverlay.classList.remove('active');
+                body.classList.remove('lightbox-active');
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+            lightboxOverlay.classList.remove('active');
+            body.classList.remove('lightbox-active');
+        }
+    });
+
+    // Görseli yakınlaştırma (zoom) işlevi
+    lightboxImage.addEventListener('click', (e) => {
+        e.stopPropagation(); // Olayın üst öğelere yayılmasını engelle
+        
+        lightboxImage.classList.toggle('zoomed');
+        isZoomed = lightboxImage.classList.contains('zoomed');
+        
+        if (!isZoomed) {
+            lightboxImageWrapper.scrollTo(0, 0); // Zoom kapanınca başa dön
+        }
+    });
+});
+        </script>
+
+    </body>
+</html>
