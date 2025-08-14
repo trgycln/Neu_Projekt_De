@@ -149,7 +149,7 @@
 /* Dinamik karşılama mesajı animasyonu */
 document.addEventListener('DOMContentLoaded', () => {
     const greetings = [
-        "Herzlich willkommen", "Hoş geldiniz", "добро пожаловать", "Welcome", "Ласкаво просимо!", "HejBienvenu", "اهلا وسهلا‎","Serdecznie witamy","Hûn bi xêr hatinî"
+        "Herzlich willkommen", "Hoş geldiniz", "добро пожаловать", "Welcome", "Ласкаво просимо!", "Bienvenu", "اهلا وسهلا‎","Serdecznie witamy","Hûn bi xêr hatinî"
     ];
     let greetingIndex = 0;
     const greetingElement = document.getElementById('greeting-message');
