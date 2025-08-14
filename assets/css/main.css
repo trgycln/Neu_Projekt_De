@@ -4416,6 +4416,8 @@ input, select, textarea {
     }
 }
 
+/*UBERUNS SAYFASI*/
+
 /* "Wir über uns" sayfası için fotoğraf stili */
 #ueber-uns .inner a.image {
     display: block !important; /* Fotoğrafın ortalanması için blok elemanı yapar */
@@ -4484,5 +4486,352 @@ body.is-preload:before, body:before {
 
     #header h1 a img {
         max-height: 2.5em !important;
+    }
+}
+
+/*ANGEBOT UND ANSTELLUNGEN*/
+
+/* Güncellenmiş Fotoğraf Galerisi Stilleri */
+.event-gallery {
+    position: relative;
+    max-width: 600px;
+    height: 400px;
+    margin: 2em auto;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    flex: 0 0 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Estetik Buton Stilleri */
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    z-index: 100;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.prev-button {
+    left: 1em;
+}
+
+.next-button {
+    right: 1em;
+}
+
+/* Tam Ekran Görüntüleyici (Lightbox) Stilleri */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.lightbox-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.lightbox-image-container {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+.lightbox-close-button {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2.5em;
+    cursor: pointer;
+    line-height: 1;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.lightbox-close-button:hover {
+    opacity: 1;
+}
+
+/* Küçük ekranlar için düzenleme */
+@media screen and (max-width: 736px) {
+    .event-gallery {
+        height: 250px;
+    }
+    .prev-button, .next-button {
+        width: 1.5em;
+        height: 1.5em;
+        font-size: 1em;
+    }
+}
+
+/* Tam ekran fotoğraf açıkken arka planı sabitleme */
+body.lightbox-active {
+    overflow: hidden;
+}
+
+/*PRESSE*/
+
+/* Basın Yayınları Galerisi Stilleri */
+.press-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    padding: 2em 0;
+}
+
+.press-gallery-item {
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 250px; /* Tüm küçük resim kutularının yüksekliğini belirle */
+}
+
+.press-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.press-gallery-item img {
+    width: 100%;
+    height: 100%; /* Kapsayıcının yüksekliğini doldurur */
+    object-fit: cover; /* Görseli, oranını bozmadan kapsayıcıya sığdırır */
+    display: block;
+    border-radius: 10px;
+}
+
+/* Yeni Tam Ekran Görüntüleyici (Lightbox) Stilleri */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.lightbox-overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 95%;
+    max-height: 95%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.lightbox-header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: none;
+}
+
+.lightbox-content.with-header .lightbox-header {
+    display: block;
+}
+
+.lightbox-image-wrapper {
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightbox-image {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Bu kural, varsayılan olarak görselin pencereye sığmasını sağlar */
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: top left;
+}
+
+.lightbox-image.zoomed {
+    transform: scale(2); /* Tıklayınca 2 kat büyütür */
+    cursor: zoom-out;
+}
+
+.lightbox-close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2.5em;
+    cursor: pointer;
+    line-height: 1;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.lightbox-close-button:hover {
+    opacity: 1;
+}
+
+body.lightbox-active {
+    overflow: hidden;
+}
+
+
+/*KONTAKT SAYFASI*/
+ 
+/* Kontakt ve Impressum Sayfası Stilleri */
+.kontakt-container,
+.impressum-container {
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 2em;
+}
+
+.map-container {
+    margin-bottom: 2em;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Oran */
+    border-radius: 10px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media screen and (max-width: 736px) {
+    .iframe-container {
+        padding-top: 75%; /* Mobil cihazlarda daha iyi görünüm için 4:3 oran */
+    }
+}
+
+/* Kontakt und Impressum Seiten-Styles */
+.kontakt-container,
+.impressum-container {
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 2em;
+}
+
+.map-container {
+    margin-bottom: 2em;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9-Verhältnis */
+    border-radius: 10px;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media screen and (max-width: 736px) {
+    .iframe-container {
+        padding-top: 75%; /* 4:3-Verhältnis für Mobilgeräte */
     }
 }
