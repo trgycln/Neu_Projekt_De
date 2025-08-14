@@ -4906,3 +4906,289 @@ body.lightbox-active {
         margin-bottom: 1em;
     }
 }
+
+/* SPRACHTREFFEN SAYFASI*/
+/* Sprachtreff Sayfası Stilleri */
+#sprachtreff-hero {
+    background-image: url('images/sprachtreff_hero.png'); /* Arka plan görseli */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#sprachtreff-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Okunurluk için koyu bir katman */
+}
+
+#sprachtreff-hero .inner-hero {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+}
+
+#sprachtreff-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.25em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+#sprachtreff-hero p {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.content-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin-top: 3em;
+}
+
+.features h3 {
+    color: #555;
+}
+
+.info-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin-top: 3em;
+}
+
+.info-list li {
+    text-align: center;
+}
+
+.info-list h3 {
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+/* Mobil için düzenlemeler */
+@media screen and (max-width: 736px) {
+    #sprachtreff-hero h1 {
+        font-size: 2.5em;
+    }
+    #sprachtreff-hero p {
+        font-size: 1.2em;
+    }
+    .info-list {
+        flex-direction: column;
+    }
+}
+
+/* BÜRGERTREFF UNTERWEGS SAYFASI*/
+
+/* Bürgertreff unterwegs Sayfası Stilleri */
+#unterwegs-hero {
+    background-image: url('images/BürgerTreff_Unterwegs/unterwegs_hero.jpg'); /* Arka plan görseli */
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#unterwegs-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Okunurluk için koyu bir katman */
+}
+
+#unterwegs-hero .inner-hero {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+}
+
+#unterwegs-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.25em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+#unterwegs-hero p {
+    font-size: 1.5em;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.destination-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.destination-card .image-link {
+    display: block;
+    height: 200px;
+    overflow: hidden;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+
+.destination-card .content {
+    padding: 1.5em;
+    color: #555;
+    text-align: center;
+}
+
+.destination-card h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+
+/* START SAYFASI YENI DUZENLEME */
+
+/* Start Sayfası Stilleri */
+#start-hero {
+    background-image: url('./images/start_hero.png');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#start-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#start-hero .inner-hero {
+    position: relative;
+    z-index: 2;
+    padding: 2em;
+}
+
+#start-hero h1 {
+    font-size: 4em;
+    margin-bottom: 0.25em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+#greeting-message {
+    font-size: 2em;
+    font-weight: 300;
+    min-height: 2em;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+#greeting-message.visible {
+    opacity: 1;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.spotlight-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.spotlight-card .content {
+    padding: 1.5em;
+    text-align: center;
+}
+
+.spotlight-card a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.spotlight-card h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #333;
+}
+
+.spotlight-card p {
+    color: #555;
+    font-size: 0.9em;
+}

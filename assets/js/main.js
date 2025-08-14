@@ -143,3 +143,31 @@
 			});
 
 })(jQuery);
+
+/* START SAYFASI*/
+
+/* Dinamik karşılama mesajı animasyonu */
+document.addEventListener('DOMContentLoaded', () => {
+    const greetings = [
+        "Herzlich willkommen", "Hoş geldiniz", "добро пожаловать", "Welcome", "Ласкаво просимо!", "HejBienvenu", "اهلا وسهلا‎","Serdecznie witamy","Hûn bi xêr hatinî"
+    ];
+    let greetingIndex = 0;
+    const greetingElement = document.getElementById('greeting-message');
+
+    function updateGreeting() {
+        if (!greetingElement) return;
+
+        greetingElement.classList.remove('visible');
+
+        setTimeout(() => {
+            greetingElement.textContent = greetings[greetingIndex];
+            greetingElement.classList.add('visible');
+            greetingIndex = (greetingIndex + 1) % greetings.length;
+        }, 1000);
+    }
+
+    if (greetingElement) {
+        updateGreeting();
+        setInterval(updateGreeting, 4000);
+    }
+});
