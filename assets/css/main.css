@@ -5608,6 +5608,10 @@ body.lightbox-active {
     .form-grid {
         grid-template-columns: 1fr;
     }
+	 /* Angebotsseite Başlık Düzenlemesi */
+    #angebote-hero h1 {
+        font-size: 2em; /* Mobil için daha küçük font boyutu */
+    }
 }
 
 /* NACHBARSCHAFTSBÖRSE SAYFASI */
