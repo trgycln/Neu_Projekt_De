@@ -104,7 +104,7 @@ input, select, textarea {
 
 	body {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg02.jpg");
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -5398,6 +5398,7 @@ body.lightbox-active {
 
 .benefit-card {
     background: #fff;
+	color: black !important;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 2em;
@@ -5435,13 +5436,17 @@ body.lightbox-active {
 .step-number {
     font-size: 2.5em;
     font-weight: 700;
-    color: #ddd;
+    color: #2e0679;
     flex-shrink: 0;
 }
 
 .step-content h3 {
     margin-top: 0;
     color: #3f51b5;
+}
+
+.step-content p{
+	color: black !important;
 }
 
 /* Mobil için düzenlemeler */
@@ -5582,6 +5587,7 @@ body.lightbox-active {
         margin: 0 !important;
         line-height: 1.2 !important;
     }
+
     /* Sayfa içerikleri için Düzenlemeler */
     #beitritt-hero {
         height: 50vh; /* Mobil cihazlar için hero yüksekliğini ayarlar */
@@ -5611,6 +5617,14 @@ body.lightbox-active {
 	 /* Angebotsseite Başlık Düzenlemesi */
     #angebote-hero h1 {
         font-size: 2em; /* Mobil için daha küçük font boyutu */
+    }
+	/* Bürgertreff unterwegs Başlık Düzenlemesi */
+    #unterwegs-hero h1 {
+        font-size: 2em; /* Mobil için daha küçük font boyutu */
+    }
+	 /* Nachbarschaftsbörse Başlık Düzenlemesi */
+    #nachbarschaftsboerse-hero h1 {
+        font-size: 1.5em !important; /* Mobil için daha küçük font boyutu */
     }
 }
 
@@ -5719,6 +5733,10 @@ body.lightbox-active {
     border-radius: 5px;
 }
 .note-box p {
+    margin: 0;
+    color: #555;
+}
+.note-box p strong {
     margin: 0;
     color: #555;
 }
