@@ -124,6 +124,23 @@ input, select, textarea {
 			transition: none !important;
 		}
 
+		body:before {
+			content: '';
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 500px;
+			height: 500px;
+			margin-top: -250px;
+			margin-left: -250px;
+			background-image: url('images/Logo_bg.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+			opacity: 0.30;
+			pointer-events: none;
+			z-index: -1;
+		}
+
 /* Type */
 
 	body, input, select, textarea {

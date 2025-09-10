@@ -154,6 +154,39 @@ document.addEventListener('DOMContentLoaded', () => {
     let greetingIndex = 0;
     const greetingElement = document.getElementById('greeting-message');
 
+    function getRandomPosition(element) {
+        const section = document.getElementById('start-hero');
+        if (!section || !element) {
+            return { top: '50%', left: '50%' };
+        }
+
+        const sectionRect = section.getBoundingClientRect();
+        const elementRect = element.getBoundingClientRect();
+
+        const logoWidth = 500;
+        const logoHeight = 500;
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        const logoX = (windowWidth - logoWidth) / 2;
+        const logoY = (windowHeight - logoHeight) / 2;
+
+        let randomX, randomY;
+
+        do {
+            randomX = Math.random() * (sectionRect.width - elementRect.width);
+            randomY = Math.random() * (sectionRect.height - elementRect.height);
+        } while (
+            randomX > logoX && randomX < (logoX + logoWidth) &&
+            randomY > logoY && randomY < (logoY + logoHeight)
+        );
+
+        return {
+            top: `${randomY}px`,
+            left: `${randomX}px`
+        };
+    }
+
     function updateGreeting() {
         if (!greetingElement) return;
 
@@ -161,6 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             greetingElement.textContent = greetings[greetingIndex];
+
+            const newPosition = getRandomPosition(greetingElement);
+            greetingElement.style.top = newPosition.top;
+            greetingElement.style.left = newPosition.left;
+            greetingElement.style.position = 'absolute';
+
             greetingElement.classList.add('visible');
             greetingIndex = (greetingIndex + 1) % greetings.length;
         }, 1000);
