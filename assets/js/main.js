@@ -168,6 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (greetingElement) {
         updateGreeting();
-        setInterval(updateGreeting, 4000);
+        setInterval(updateGreeting, 1000);
     }
 });
