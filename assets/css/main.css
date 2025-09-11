@@ -5076,7 +5076,7 @@ body.lightbox-active {
 
 /* Start Sayfası Stilleri */
 #start-hero {
-    background-image: url('./images/start_hero.png');
+    background-image: url('images/start_hero10.png');
     background-size: cover;
     background-position: center center;
     position: relative;
