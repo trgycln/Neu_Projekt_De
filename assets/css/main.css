@@ -1,10 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic|Open+Sans|Merriweather|Pacifico|Bangers|Roboto:300|Playfair+Display:400");
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic|Open+Sans|Merriweather|Pacifico|Bangers|Roboto:300|Playfair+Display:400|Bad+Script");
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic|Open+Sans|Merriweather|Pacifico|Bangers|Roboto:300|Playfair+Display:400|Bad+Script");
-
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Bangers&family=Merriweather&family=Open+Sans&family=Pacifico&family=Playfair+Display:wght@400;700&family=Raleway:wght@200;700&family=Roboto:wght@300&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 /*
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
@@ -5741,3 +5736,30 @@ body.lightbox-active {
     color: #555;
 }
 
+/* ======================================================= */
+/* == BÜYÜK EKRAN İÇİN NİHAİ DÜZENLEME == */
+/* ======================================================= */
+@media screen and (min-width: 1681px) {
+
+    /* 1. Akıllı ve Esnek Yazı Tipi Boyutu */
+    html {
+          font-size: clamp(16pt, 1.2vw, 22pt) !important;
+    }
+
+    /* 2. Diğer Ana Kapsayıcıları Sınırlandırma ve Ortalama */
+    #banner,
+    .wrapper,
+    #footer {
+        max-width: 1280px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* 3. SABİT HEADER İÇİN ÖZEL ORTALAMA KURALI */
+    #header {
+        max-width: 1280px !important;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+}
